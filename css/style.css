@@ -1,0 +1,162 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+header nav ul li {
+    margin-left: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+header nav ul li a:hover {
+    color: #e91e63;
+}
+.btn-header {
+    background: #e91e63;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-header:hover {
+    background: #c2185b;
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("../image/pexels-pixabay-262978.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 150px 0 0 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    color: #fff;
+    background: rgba(0,0,0,0.35);
+    padding: 20px 25px;
+    border-radius: 6px;
+}
+
+/* ===== HERO TEXT (effet machine à écrire multi-lignes) ===== */
+.hero-text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #fff;
+    overflow: hidden;
+    border-right: 2px solid #e91e63;
+    white-space: normal;          /* autorise les retours à la ligne */
+    display: inline-block;
+    animation: typing 6s steps(130, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 1000px; /* assez grand pour tout afficher */
+    }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 40px 20px 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.footer-section {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style: none;
+}
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+.instagram-logo {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+.instagram-logo:hover {
+    transform: scale(1.1);
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
